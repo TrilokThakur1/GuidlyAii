@@ -1,7 +1,7 @@
 from google import genai
 import json
 
-client = genai.Client(api_key="AIzaSyCuDPc6_bGx4IWeklfmoE-qJaY6o79jE3M")
+client = genai.Client(api_key="AIzaSyCbeeIpl4EAIcm1lLOFg-5Hg7eGu1aVffM")
 
 def askAi(prompt):
     prmpt = f"""
@@ -61,7 +61,7 @@ User Query:
     )
 
     try:
-        return json.loads(response.text)
+      return json.loads(response.text)
     except json.JSONDecodeError:
         print("RAW OUTPUT:", response.text)
         raise ValueError("AI returned invalid JSON")
