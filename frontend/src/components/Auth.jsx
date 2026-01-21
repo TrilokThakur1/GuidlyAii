@@ -8,7 +8,7 @@ import { UserContext } from '../context/UserData'
 
 export default function Auth() {
 
-
+const api = import.meta.env.VITE_API_URL;
 
 
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ export default function Auth() {
       password: e.target[1].value
     }
 
-    let res = await axios.post("http://localhost:8000/api/auth/login", data);
+    let res = await axios.post(`${api}/api/auth/login`, data);
 
     if(res.status == 200)
     {
@@ -60,7 +60,7 @@ export default function Auth() {
       password: e.target[3].value
     }
 
-    let res = await axios.post("http://localhost:8000/api/auth/register", data);
+    let res = await axios.post(`${api}/api/auth/register`, data);
 
     if(res.status == 201)
     {
