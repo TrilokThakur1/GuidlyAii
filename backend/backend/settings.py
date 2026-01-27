@@ -16,11 +16,12 @@ SECRET_KEY = 'django-insecure-v5#iap-8qcv*-hzny&08!4c4xuz$zps&ro%1o+519g5wvgcfpp
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "https://guidlyaii-backend1.onrender.com",
+    "guidlyaii-backend1.onrender.com",
     ".onrender.com",
     "localhost",
     "127.0.0.1",
 ]
+
 
 
 
@@ -43,8 +44,8 @@ JWT_SECRET = "d0431cc4fbc025bf7e4b95796aa8f202f57380da345edc0e2e52dcb7195dfa08"
 JWT_ALGORITHM = "HS256"
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',   # MUST be first
     'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -57,17 +58,11 @@ CORS_ALLOWED_ORIGINS = [
     "https://guidlyaii.onrender.com",
 ]
 
-
-CORS_ALLOW_HEADERS = [
-    "authorization",
-    "content-type",
-]
-
-
-CORS_ALLOWED_ORIGINS = [
+CSRF_TRUSTED_ORIGINS = [
     "https://guidlyaii.onrender.com",
 ]
 
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'backend.urls'
 
