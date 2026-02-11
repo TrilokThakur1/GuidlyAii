@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-v5#iap-8qcv*-hzny&08!4c4xuz$zps&ro%1o+519g5wvgcfpp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "guidlyaii-backend1.onrender.com",
@@ -56,10 +56,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://guidlyaii.onrender.com",
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://guidlyaii.onrender.com",
+    "http://localhost:5173",
 ]
 
 CORS_ALLOW_CREDENTIALS = True

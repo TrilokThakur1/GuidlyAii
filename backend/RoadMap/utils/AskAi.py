@@ -1,7 +1,7 @@
 from google import genai
 import json
 
-client = genai.Client(api_key="AIzaSyDErE319iByBU7n_Jf6btWvXb3Hkie1FU4")
+client = genai.Client(api_key="AIzaSyCuuwP5u4fCSQpbTF6rTsG_2WOrW15eV4k")
 
 def askAi(prompt):
     prmpt = f"""

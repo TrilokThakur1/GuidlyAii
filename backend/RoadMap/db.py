@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://satyamrana665_db_user:HeVCxDyrEPBFvLOK@cluster0.pvw2twj.mongodb.net/")
+client = MongoClient("mongodb://localhost:27017/")
 
 db = client["testdb"]
 
